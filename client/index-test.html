@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example HTML and CSS</title>
+    <style>
+      /* Set the font and background color for the page */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      /* Center the content on the page */
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      /* Style the header */
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      /* Style the section titles */
+      h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
+      /* Style the table */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      /* Style the table header */
+      th {
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 8px;
+      }
+
+      /* Style the table rows */
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      /* Style the table data cells */
+      td {
+        padding: 8px;
+      }
+
+      /* Style the table data cells for the highest and lowest values */
+      .highest {
+        color: #008000;
+      }
+
+      .lowest {
+        color: #ff0000;
+      }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lot Information</h1>
+
+      <section>
+        <h2>SMALL</h2>
+        <table>
+          <tr>
+            <th>Highest</th>
+            <td class="highest">97 lots available</td>
+            <th>HE12</th>
+          </tr>
+          <tr>
+            <th>Lowest</th>
+            <td class="lowest">1 lots available</td>
+            <td>HE01, HE02, GE04</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>MEDIUM</h2>
+        <table>
+          <tr>
+            <th>Highest</th>
+            <td class="highest">297 lots available</td>
+            <th>VB02</th>
+          </tr>
+          <tr>
+            <th>Lowest</th>
+            <td class="lowest">0 lots available</td>
+            <td>XE01, LP01</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>BIG</h2>
+        <table>
+          <tr>
+            <th>Highest</th>
+            <td class="highest">390 lots available</td>
+            <th>PO01</th>
+          </tr>
+          <tr>
+            <th>Lowest</th>
+            <td class="lowest">0 lots available</td>
+            <td>FA-1, FA03, HO04</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>LARGE</h2>
+        <table>
+          <tr>
+            <th>Highest</th>
+            <td class="highest">590 lots available</td>
+            <th>MN01</th>
+          </tr>
+          <tr>
+            <th>Lowest</th>
+            <td class="lowest">
+            <td>HE10, HE12, KE09</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
