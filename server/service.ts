@@ -2,9 +2,9 @@ import { CarparkSizeEnum } from './enum';
 import { ISgGovParkingLot, IParkingLotResponse } from './models';
 
 export const processData = (response: ISgGovParkingLot) => {
-  const items = response.items;  
-  if (items.length < 0 || items?.[0]?.['carpark_data']?.length < 0) throw new Error("Issue with data, please try again");
-
+  const items = response?.items ?? [];  
+  if (items.length <= 0 || items?.[0]?.['carpark_data']?.length <= 0) throw new Error("Issue with data, please try again");
+  
   const res: IParkingLotResponse = {
     small: {
       lowest: { amount: 999999, lots: [""] },
