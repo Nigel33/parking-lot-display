@@ -16,3 +16,14 @@ To run local BE with docker
 - copy the container id and run this command `docker stop <container-id>`
 - run this command `docker container prune -f` to remove all stopped docker containers. 
 - Enter into docker desktop, click on docker images and delete the image. 
+
+To run local FE with docker 
+- Ensure Docker desktop is first installed. 
+- Run DOcker desktop
+- Run this command in root folder of server: `docker build -t my-client-app .`
+- Run this command in root folder of server: `docker run -p 3000:3000 my-client-app`
+- To stop docker container and delete docker image permanently, open up a new terminal 
+- run this command: `docker ps` 
+- copy the container id and run this command `docker stop <container-id>`
+- run this command `docker container prune -f` to remove all stopped docker containers. 
+- Enter into docker desktop, click on docker images and delete the image. 
