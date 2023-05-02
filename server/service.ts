@@ -35,9 +35,15 @@ export const processData = (response: ISgGovParkingLot) => {
 }
 
 const processSize = (carparkObj: ISgGovParkingLot['items'][0]['carpark_data'][0], resObj: IParkingLotResponse) => {  
-  const carparkInfo = carparkObj?.['carpark_info']?.[0];
-  const totalLotsNo = +carparkInfo?.['total_lots'];  
-  const lotsAvailableNo = +carparkInfo?.['lots_available'];
+  const carparkInfo = carparkObj?.['carpark_info'];
+  let totalLotsNo = 0;
+  let lotsAvailableNo = 0;
+  
+  for(let i = 0; i < carparkInfo.length; i++) {
+    totalLotsNo += +carparkInfo[i]['total_lots'];
+    lotsAvailableNo += +carparkInfo[i]['lots_available'];
+  }
+  
   const carparkNumberString = carparkObj?.['carpark_number'];
 
   if (totalLotsNo < 100) {
