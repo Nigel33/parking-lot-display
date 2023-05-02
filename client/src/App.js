@@ -113,8 +113,8 @@ function App() {
             </tr>
             <tr>
               <th>Lowest</th>
-              <td className="lowest">{lotData.large.highest.amount} lots available</td>
-              <td>{lotData.large.highest.lots.join(', ')}</td>
+              <td className="lowest">{lotData.large.lowest.amount} lots available</td>
+              <td>{lotData.large.lowest.lots.join(', ')}</td>
             </tr>
           </tbody>
         </table>
